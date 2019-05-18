@@ -1,6 +1,7 @@
 {
   "name": "photography-search",
   "version": "0.1.0",
+  "homepage": "https://avalos010.github.io/photography-search/",
   "private": true,
   "dependencies": {
     "react": "^16.8.6",

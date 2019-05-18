@@ -7,6 +7,7 @@ import { Switch, Route } from "react-router-dom";
 import "../styles.css";
 import SearchImages from "./SearchImages";
 import Latest from "./Latest";
+import Intro from "./Intro";
 
 export const ReducerContext = createContext();
 export default function App() {
@@ -22,6 +23,7 @@ export default function App() {
       <Navigation />
       <ReducerContext.Provider value={{ state, dispatch }}>
         <Switch>
+          <Route exact path="/" component={Intro} />
           <Route exact path="/popular" component={Popular} />
           <Route exact path="/search" component={SearchImages} />
           <Route exact path="/latest" component={Latest} />
