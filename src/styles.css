@@ -203,3 +203,37 @@ background: #eee;
     align-items: center;
 }
 
+
+.selected-image-container {
+    width: 100%;
+    min-height: 600px;
+    height: 100vh;
+    position: fixed;
+    margin-top: -50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.8);
+    z-index: 10;
+
+}
+
+.selected-image-container  li:hover{
+    transform: scale(1) !important;
+}
+
+.selected-image-btn-container > button {
+    color: #000;
+    background: #ddd;
+    width: 150px;
+    height: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    border-radius: 9px;
+}
+
+.selected-image-container  span {
+     display: none;
+}

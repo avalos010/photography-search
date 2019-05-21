@@ -19,6 +19,12 @@ export default function Reducer(state, action) {
         images: action.payload
       };
     }
+    case "selectedImage": {
+      return {
+        ...state,
+        selectedImage: action.payload
+      };
+    }
     case "addToFavorites": {
       return {
         ...state,

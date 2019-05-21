@@ -8,13 +8,15 @@ import "../styles.css";
 import SearchImages from "./SearchImages";
 import Latest from "./Latest";
 import Intro from "./Intro";
+import SelectedImage from "./SelectedImage";
 
 export const ReducerContext = createContext();
 export default function App() {
   const [state, dispatch] = useReducer(reducer, {
     images: [],
     faves: [],
-    popular: []
+    popular: [],
+    selectedImage: null
   });
 
   document.title = "Photography";
@@ -22,6 +24,7 @@ export default function App() {
     <div>
       <Navigation />
       <ReducerContext.Provider value={{ state, dispatch }}>
+        {state.selectedImage && <SelectedImage />}
         <Switch>
           <Route exact path="/" component={Intro} />
           <Route exact path="/popular" component={Popular} />
