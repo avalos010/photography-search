@@ -209,7 +209,7 @@ background: #eee;
     min-height: 600px;
     height: 100vh;
     position: fixed;
-    margin-top: -50px;
+    margin-top: -90px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -236,4 +236,8 @@ background: #eee;
 
 .selected-image-container  span {
      display: none;
+}
+
+.selected-image-container img {
+     width: 100%;
 }
