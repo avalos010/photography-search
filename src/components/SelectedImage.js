@@ -8,6 +8,7 @@ const SelectedImage = () => {
   const handleUnselectImage = () => {
     dispatch({ type: "selectedImage", payload: null });
   };
+
   console.log(state.selectedImage);
   return (
     <div className="selected-image-container image-container">

@@ -1,9 +1,8 @@
-import React, { createContext, useState, useReducer, useEffect } from "react";
+import React, { createContext, useReducer } from "react";
 import reducer from "../reducer/reducer";
-
 import Popular from "./Popular";
 import Navigation from "./Navigation";
-import { Switch, Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "../styles.css";
 import SearchImages from "./SearchImages";
 import Latest from "./Latest";
@@ -16,7 +15,7 @@ export default function App() {
     images: [],
     faves: [],
     popular: [],
-    selectedImage: null
+    selectedImage: null,
   });
 
   document.title = "Photography";
@@ -25,12 +24,12 @@ export default function App() {
       <Navigation />
       <ReducerContext.Provider value={{ state, dispatch }}>
         {state.selectedImage && <SelectedImage />}
-        <Switch>
-          <Route exact path="/" component={Intro} />
-          <Route exact path="/popular" component={Popular} />
-          <Route exact path="/search" component={SearchImages} />
-          <Route exact path="/latest" component={Latest} />
-        </Switch>
+        <Routes>
+          <Route exact path="/" element={<Intro />} />
+          <Route exact path="/popular" element={<Popular />} />
+          <Route exact path="/search" element={<SearchImages />} />
+          <Route exact path="/latest" element={<Latest />} />
+        </Routes>
       </ReducerContext.Provider>
     </div>
   );
