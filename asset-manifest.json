@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/photography-search/static/css/main.426a63e8.css",
+    "main.js": "/photography-search/static/js/main.bee13e23.js",
+    "static/media/216829.jpg": "/photography-search/static/media/216829.2f1673e294bbab41d7fb.jpg",
+    "static/media/camera.jpg": "/photography-search/static/media/camera.b023a1ddbc0edb973168.jpg",
+    "index.html": "/photography-search/index.html",
+    "main.426a63e8.css.map": "/photography-search/static/css/main.426a63e8.css.map",
+    "main.bee13e23.js.map": "/photography-search/static/js/main.bee13e23.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.426a63e8.css",
+    "static/js/main.bee13e23.js"
+  ]
+}
