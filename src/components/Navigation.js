@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function() {
+function Navigation() {
   return (
     <div className="navigation-bar">
       <h2>Photography</h2>
@@ -21,3 +21,4 @@ export default function() {
     </div>
   );
 }
+export default Navigation;

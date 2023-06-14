@@ -3,17 +3,14 @@ import camera from "../img/camera.jpg";
 import { ReducerContext } from "./App";
 
 export default function SearchInput({ page }) {
-  const { state, dispatch } = useContext(ReducerContext);
+  const { dispatch } = useContext(ReducerContext);
   const [query, setQuery] = useState("");
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const handleSearch = async e => {
+  const handleSearch = async (e) => {
     const res = await fetch(
-      `https://api.unsplash.com/search/photos?page=${page}&query=${query}&client_id=${
-        process.env.REACT_APP_ACCESS_KEY
-      }`
+      `https://api.unsplash.com/search/photos?page=${page}&query=${query}&client_id=${process.env.REACT_APP_ACCESS_KEY}`
     );
     const json = await res.json();
-    console.log(json.results);
     dispatch({ type: "searchedImages", payload: json.results });
   };
 
@@ -31,7 +28,7 @@ export default function SearchInput({ page }) {
       <img src={camera} alt="camera" className="camera-intro" />
       <div className="input-container">
         <input
-          onChange={e => setQuery(e.target.value)}
+          onChange={(e) => setQuery(e.target.value)}
           type="text"
           className="search_input"
         />

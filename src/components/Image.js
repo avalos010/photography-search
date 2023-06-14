@@ -13,7 +13,7 @@ export default function Image({ img, url }) {
 
       <span>
         By:
-        <a href={img.user.links.html} target="_blank">
+        <a href={img.user.links.html} target="_blank" rel="noreferrer">
           {img.user.username}
         </a>
       </span>
